@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracking App</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" />
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Top Header -->
+        <header class="main-head">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo">
+                <h1>EXPENSIFY</h1>
+            </div>
+            <div class="dark-light-mode">
+                <div id="dark-mode"><span class="material-icons-sharp"> dark_mode </span></div>
+                <div id="light-mode"><span class="material-icons-sharp"> light_mode </span></div>
+            </div>
+        </header>
+        <!-- Main Body -->
+        <div class="main">
+            <!-- Main Body Left -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="expense.html"><span class="material-icons-sharp">dashboard</span>Dashboard</a></li>
+                    <li><a href="TransList.html" id="transaction-link"><span
+                                class="material-icons-sharp">credit_card</span>Transactions</a></li>
+                    <li><a href="#subscription" id="sub_btn"><span
+                                class="material-icons-sharp">subscriptions</span>Subscription</a></li>
+                    <li><a href="#settings"><span class="material-icons-sharp">settings</span>Settings</a></li>
+                    <li><a href="#helpcenter"><span class="material-icons-sharp">help_center</span>Help Center</a></li>
+                    <li><a href="#logout" id="logOut"><span class="material-icons-sharp">logout</span>Logout</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span class="material-icons-sharp">menu</span>
+                </div>
+            </nav>
+            <!-- Main Body Mid -->
+            <div class="mid-body">
+                <div class="overview">
+                    <h1>OVERVIEW</h1>
+                    <div class="main-box">
+                        <div class="box1" id='totalIncomeContainer'>
+                            <h2>Total Income</h2>
+                            <p id="totalIncome">₹ 0</p>
+                        </div>
+                        <div class="box2" id="totalExpenseContainer">
+                            <h2>Total Expense</h2>
+                            <p id="totalExpense">₹ 0</p>
+                        </div>
+                        <div class="box3" id='totslReminingContainer'>
+                            <h2>Remaining Income</h2>
+                            <p id="totalRemain">₹ 0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-Container">
+                    <button id="new-button">+ New</button>
+                    <button id="income-btn1">+ ₹100</button>
+                    <button id="income-btn2">+ ₹200</button>
+                    <button id="income-btn3">+ ₹500</button>
+                    <button id="income-btn4">+ ₹1,000</button>
+                    <button id="income-btn5">+ ₹2,000</button>
+                    <button id="income-btn6">+ ₹5,000</button>
+                    <button id="income-btn7">+ ₹10,000</button>
+                </div>
+                <div class="backdrop" id="backdrop"></div>
+                <div class="form-container" id="form-container">
+                    <div class="close-button">
+                        <button id="close-button">Close</button>
+                    </div>
+                    <div id="user-form">
+                        <form>
+                            <div id="content-form">
+                                <label for="income">Enter Income Amount</label>
+                                <input type="number" id="income" required>
+                            </div>
+                            <button type="submit" id="add-income-btn">Add Income</button>
+                        </form>
+                        <form>
+                            <div id="content-form">
+                                <label for="expense">Enter Expense Amount</label>
+                                <input type="number" id="expense" required>
+                                <label for="description">Choose Description</label>
+                                <input type="text" id="description" required>
+                                <label for="category">Choose a Category</label>
+                                <select id="category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Clothes">Clothes</option>
+                                    <option value="Game">Game</option>
+                                    <option value="Movie">Movie</option>
+                                </select>
+                                <label>Payment Method</label>
+                                <div id="payment-options">
+                                    <div class="payment-option">
+                                        <input type="radio" id="credit-card" name="payment" value="Credit Card">
+                                        <label for="credit-card">Credit Card</label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" id="debit-card" name="payment" value="Debit Card">
+                                        <label for="debit-card">Debit Card</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" id="add-expense-btn">Add Expense</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <!-- Main Body Right -->
+            <div class="right-body">
+                <div class="show">
+                    <div class="pie-chart">
+                        <p>Top 3 Expenses</p>
+                        <canvas id="chart"></canvas>
+                    </div>
+                    <div>
+                        <p>Recent Expenses</p>
+                        <ul id="user-list"></ul>
+                        <!-- <div class="button-container">
+                            <button type='click' id="previousButton"><span
+                                    class="material-icons-sharp">keyboard_backspace </span></button>
+                            <button type='click' id="nextButton"><span class="material-icons-sharp">
+                                    arrow_right_alt</span></button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+    <script src="exp.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="premiumuser.js"></script>
+    <script src="purchase.js"></script>
+</body>
+
+</html>

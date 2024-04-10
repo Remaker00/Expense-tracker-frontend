@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense List</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" />
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Top Header -->
+        <header class="main-head">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo">
+                <h1>EXPENSIFY</h1>
+            </div>
+            <div class="dark-light-mode">
+                <div id="dark-mode"><span class="material-icons-sharp"> dark_mode </span></div>
+                <div id="light-mode"><span class="material-icons-sharp"> light_mode </span></div>
+            </div>
+        </header>
+        <!-- Main Body -->
+        <div class="main">
+            <!-- Main Body Left -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="expense.html"><span class="material-icons-sharp">dashboard</span>Dashboard</a></li>
+                    <li><a href="TransList.html" id="transaction-link"><span
+                                class="material-icons-sharp">credit_card</span>Transactions</a></li>
+                    <li><a href="#subscription" id="sub_btn"><span
+                                class="material-icons-sharp">subscriptions</span>Subscription</a></li>
+                    <li><a href="#settings"><span class="material-icons-sharp">settings</span>Settings</a></li>
+                    <li><a href="#helpcenter"><span class="material-icons-sharp">help_center</span>Help Center</a></li>
+                    <li><a href="#logout" id="logOut"><span class="material-icons-sharp">logout</span>Logout</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span class="material-icons-sharp">menu</span>
+                </div>
+            </nav>
+            <!-- Main Body Right -->
+            <div class="right-body">
+                <div class="show">
+                    <div>
+                        <p>Recent Expenses</p>
+                        <ul id="user-list"></ul>
+                        <div class="button-container">
+                            <button type='click' id="previousButton"><span
+                                    class="material-icons-sharp">keyboard_backspace </span></button>
+                            <button type='click' id="nextButton"><span class="material-icons-sharp">
+                                    arrow_right_alt</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script> -->
+    <script src="exp.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="premiumuser.js"></script>
+    <script src="purchase.js"></script>
+</body>
+
+</html>

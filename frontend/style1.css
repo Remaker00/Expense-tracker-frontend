@@ -1,0 +1,568 @@
+.hidden {
+    visibility: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.main-container {
+    /* background-color: rgb(205, 195, 215); */
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+.main-head {
+    /* background-color: #ffffff; */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    height: 3rem;
+    width: 99.5vw;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+
+}
+
+.logo img {
+    width: 35px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Night and day */
+
+.dark-light-mode {
+    width: 60px;
+    border-radius: 20px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    /* background-color: grey; */
+    cursor: pointer;
+}
+
+
+.dark-mode {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-mode .logo img {
+    filter: invert(100%);
+}
+
+.dark-mode .pie-chart p {
+    color: #000000;
+}
+
+.dark-mode .menu-toggle {
+    color: white;
+}
+
+.photo-icon {
+    display: flex;
+    border: 2px solid black;
+}
+
+.photo-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.nav-links {
+    width: 14vw;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 5px;
+    padding: 20px;
+    background-color: #33333300;
+    /* overflow: hidden; */
+}
+
+
+nav li a {
+    float: left;
+    display: flex;
+    align-items: center;
+    color: rgb(90, 90, 90);
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 5px;
+    width: 86%;
+}
+
+nav li span {
+    padding-right: 8px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+nav li:hover {
+    border-radius: 10px;
+    background-color: #0020d3;
+    /* color: black; */
+}
+
+nav li a:hover {
+    border-radius: 10px;
+    background-color: white;
+    color: #0020d3;
+}
+
+@media only screen and (max-width: 880px) {
+    .logo {
+        margin-left: 30px;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        width: 160px;
+        height: 100vh;
+        background-color: #1f1f1f90;
+        backdrop-filter: blur(10px);
+        padding-top: 50px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav li a {
+        color: white;
+    }
+
+    .nav-links.active {
+        left: -5px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        top: -40px;
+        left: 5px;
+        cursor: pointer;
+        color: #000000;
+    }
+}
+
+
+.mid-body {
+    padding: 20px;
+    width: 50vw;
+}
+
+
+.overview {}
+
+.overview h1 {
+    margin-bottom: 20px;
+}
+
+.main-box {
+    display: flex;
+}
+
+.box1,
+.box2,
+.box3 {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.5s;
+}
+
+.box1:hover,
+.box2:hover,
+.box3:hover {
+    transform: translateY(-1rem);
+    box-shadow: rgba(0, 0, 0, 0.874) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.box1 h2,
+.box2 h2,
+.box3 h2 {
+    margin-bottom: 30px;
+}
+
+.box1 {
+    background: linear-gradient(to top, rgb(0, 41, 117), blue);
+}
+
+.box2 {
+    background: linear-gradient(to top, rgb(132, 0, 0), red);
+}
+
+.box3 {
+    background: linear-gradient(to top, rgb(4, 130, 0), rgb(0, 205, 0));
+}
+
+.button-Container {
+    display: grid;
+    height: 6rem;
+    grid-template-columns: repeat(4, auto);
+    margin-bottom: 30px;
+}
+
+.button-Container button {
+    margin: 3.5px;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#new-button {
+    background-color: #000000;
+    color: white;
+}
+
+#income-btn1 {
+    background-color: rgb(136, 0, 255);
+}
+
+#income-btn2 {
+    background-color: green;
+}
+
+#income-btn3 {
+    background-color: rgb(0, 200, 255);
+}
+
+#income-btn4 {
+    background-color: #db7c00;
+}
+
+#income-btn5 {
+    background-color: #4661f8;
+}
+
+#income-btn6 {
+    background-color: #678a01;
+}
+
+/* Backdrop styles */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+
+/* Form container styles */
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* White background color */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 999;
+    /* Ensure the form is above the backdrop */
+    display: none;
+    /* Initially hidden */
+}
+
+/* Close button styles */
+.close-button {
+    text-align: right;
+}
+
+
+#user-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.close-button button {
+    width: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+
+.second {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.container {
+    margin-top: 8px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.show {
+    width: 20vw;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#user-form button {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.new-button button {
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.expense-item>span {
+    margin-right: 5px;
+    /* Adjust as needed */
+}
+
+.category {
+    width: 32%;
+    /* Adjust width as needed */
+}
+
+.card {
+    width: 43%;
+    /* Adjust width as needed */
+}
+
+.expense {
+    text-align: end;
+    width: 25%;
+    color: red;
+}
+
+@media only screen and (max-width: 1100px) {
+    .expense-item>span {
+        margin-right: 3px;
+        /* Adjust as needed */
+    }
+
+    .category {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .card {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .expense {
+        text-align: end;
+        color: red;
+        white-space: nowrap;
+        overflow: scroll;
+    }
+
+}
+
+
+
+#user-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+
+
+#user-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+#user-list button {
+    background-color: #beb22c;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.show p {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+/* .right-body */
+
+
+
+@media only screen and (max-width: 880px) {
+    .mid-body {
+        width: 60vw;
+    }
+
+    /* .right-body{
+        border: 2px solid green;
+        width: 30vw;
+        padding: 0px;
+    } */
+
+    .show {
+        padding: 5px;
+        width: 29vw;
+    }
+}
+
+.container {
+    background-color: white;
+}
+
+#Chart {
+    cursor: pointer;
+}
+
+
+
+.pie-chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+@media only screen and (max-width: 722px) {
+    .mid-body {
+        width: 90vw;
+        margin: 10px;
+    }
+
+    .right-body {}
+
+    .show {
+        display: flex;
+        width: 93vw;
+        justify-content: space-evenly;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .pie-chart {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 510px) {
+    .main-box {
+        width: 100%;
+        overflow: auto;
+    }
+
+    .mid-body {
+        width: 83%;
+    }
+
+    .show {
+        flex-direction: column;
+    }
+
+    .pie-chart {
+        margin: 20px;
+        width: 78%;
+    }
+
+    #user-list {
+        padding: 10px;
+    }
+}
