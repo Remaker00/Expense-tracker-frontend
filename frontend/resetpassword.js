@@ -10,7 +10,7 @@ async function handlepassword(event) {
 
     const data = { email, password };
     try {
-        const response = await fetch('https://expense-tracker-app-backend-ashen.vercel.app/resetpassword/pass_reset', {
+        const response = await fetch('https://expense-backend-app.vercel.app/resetpassword/pass_reset', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

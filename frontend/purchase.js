@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const token = localStorage.getItem('token');
         try {
-            let response = await fetch('https://expense-tracker-app-backend-ashen.vercel.app/payment/make_payment', {
+            let response = await fetch('https://expense-backend-app.vercel.app/payment/make_payment', {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 order_id: orderData.order.id,
                 
                 handler: async function (response) {
-                    await fetch('https://expense-tracker-app-backend-ashen.vercel.app/payment/update_payment', {
+                    await fetch('https://expense-backend-app.vercel.app/payment/update_payment', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

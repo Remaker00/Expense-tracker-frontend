@@ -1,6 +1,6 @@
 async function premiumuser() {
     try {
-        const response = await fetch('https://expense-tracker-app-backend-ashen.vercel.app/premium', {
+        const response = await fetch('https://expense-backend-app.vercel.app/premium', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`

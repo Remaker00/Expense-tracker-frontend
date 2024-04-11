@@ -22,7 +22,7 @@ async function handleUserForm(event) {
     const userData = addButtonClicked ? prepareIncomeData() : prepareExpenseData();
 
     try {
-        const response = await fetch(addButtonClicked ? 'https://expense-tracker-app-backend-ashen.vercel.app/exp/add_income' : '/exp/add_expense', {
+        const response = await fetch(addButtonClicked ? 'https://expense-backend-app.vercel.app/exp/add_income' : '/exp/add_expense', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ async function fetchUsers() {
         }
 
         //?page=${currentPage}
-        const responseExpenses = await fetch(`https://expense-tracker-app-backend-ashen.vercel.app/exp/fetch_exp`, {
+        const responseExpenses = await fetch(`https://expense-backend-app.vercel.app/exp/fetch_exp`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -115,7 +115,7 @@ async function fetchUsers() {
         const totalExpenseElement = document.getElementById('totalExpense');
         totalExpenseElement.textContent = `- ₹${totalExpense}`;
 
-        const responseIncome = await fetch(`https://expense-tracker-app-backend-ashen.vercel.app/exp/fetch_income`, {
+        const responseIncome = await fetch(`https://expense-backend-app.vercel.app/exp/fetch_income`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -174,7 +174,7 @@ let totalPages = 1;
 // Deleting Expenses
 async function deleteUser(expenseId) {
     try {
-        const response = await fetch(`https://expense-tracker-app-backend-ashen.vercel.app/exp/del_exp/${expenseId}`, {
+        const response = await fetch(`https://expense-backend-app.vercel.app/exp/del_exp/${expenseId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -231,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuToggle.addEventListener('click', function() {
         navLinks.classList.toggle('active');
+        document.body.classList.toggle('lock-scroll');
     });
 });
 

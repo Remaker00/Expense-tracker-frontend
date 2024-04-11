@@ -12,7 +12,7 @@
     /* background-color: rgb(205, 195, 215); */
     height: 100vh;
     width: 100vw;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .main-head {
@@ -27,6 +27,7 @@
 }
 
 .logo {
+    margin-left: 20px;
     display: flex;
     align-items: center;
 }
@@ -38,6 +39,7 @@
 }
 
 .logo img {
+    margin-right: 10px;
     width: 35px;
 }
 
@@ -49,6 +51,7 @@
 /* Night and day */
 
 .dark-light-mode {
+    border: 2px solid black;
     width: 60px;
     border-radius: 20px;
     padding: 2px;
@@ -75,6 +78,10 @@
 
 .dark-mode .menu-toggle {
     color: white;
+}
+
+.dark-mode .dark-light-mode{
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .photo-icon {
@@ -146,19 +153,21 @@ nav li a:hover {
         margin-left: 30px;
     }
 
+
     .nav-links {
         position: fixed;
+        height: 100vh;
         left: -100%;
         width: 160px;
-        height: 100vh;
-        background-color: #1f1f1f90;
+        top: -5%;
+        background-color: #cfcfcf90;
         backdrop-filter: blur(10px);
         padding-top: 50px;
-        transition: left 0.3s ease-in-out;
+        transition: left 0.5s ease-in-out;
     }
 
     .nav li a {
-        color: white;
+        color: rgb(38, 38, 38);
     }
 
     .nav-links.active {
@@ -166,19 +175,24 @@ nav li a:hover {
     }
 
     .menu-toggle {
-        display: block;
+        display: inline-block;
         position: relative;
         top: -40px;
         left: 5px;
         cursor: pointer;
         color: #000000;
     }
+
 }
 
 
 .mid-body {
     padding: 20px;
     width: 50vw;
+}
+
+body.lock-scroll {
+    overflow: hidden;
 }
 
 
@@ -282,25 +296,24 @@ nav li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.558);
     display: none;
 }
 
 
 /* Form container styles */
 .form-container {
+    min-width: 300px;
+    max-width: 500px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    /* White background color */
     padding: 20px;
     border-radius: 5px;
     z-index: 999;
-    /* Ensure the form is above the backdrop */
     display: none;
-    /* Initially hidden */
 }
 
 /* Close button styles */
@@ -310,12 +323,7 @@ nav li a:hover {
 
 
 #user-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
 }
 
 label {
@@ -323,13 +331,21 @@ label {
 }
 
 input[type="number"],
-input[type="text"],
-select {
-    width: 100%;
+input[type="text"] {
+    width: 90%;
     padding: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+}
+
+#payment-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#category option {
+    border: 2px solid red;
 }
 
 .close-button button {
@@ -355,6 +371,13 @@ button:hover {
     margin-right: 10px;
 }
 
+select {
+    display: block;
+    width: 10vw;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
 
 
 .second {
@@ -377,8 +400,10 @@ button:hover {
 }
 
 #user-form button {
-    border: 2px solid black;
+    border: 2px solid rgb(145, 145, 145);
+    background-color: #abaaaa;
     padding: 10px;
+    font-weight: bolder;
 }
 
 .new-button button {
@@ -447,8 +472,7 @@ button:hover {
 #user-list {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
-    border: 2px solid black;
+    margin-top: 20px;
 }
 
 
@@ -481,25 +505,6 @@ button:hover {
 
 /* .right-body */
 
-
-
-@media only screen and (max-width: 880px) {
-    .mid-body {
-        width: 60vw;
-    }
-
-    /* .right-body{
-        border: 2px solid green;
-        width: 30vw;
-        padding: 0px;
-    } */
-
-    .show {
-        padding: 5px;
-        width: 29vw;
-    }
-}
-
 .container {
     background-color: white;
 }
@@ -509,14 +514,47 @@ button:hover {
 }
 
 
-
 .pie-chart {
     background-color: white;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
+@media only screen and (max-width: 880px) {
+    .mid-body {
+        width: 60vw;
+    }
+
+    .show {
+        padding: 5px;
+        width: 29vw;
+    }
+
+    .pie-chart {
+        border: 2px solid rgb(225, 225, 225);
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        padding-top: 10px;
+        padding: 10px;
+        margin: 5px;
+        height: 85px;
+    }
+
+    .box1 h2,
+    .box2 h2,
+    .box3 h2 {
+        margin-bottom: 5px;
+    }
+}
+
 
 
 @media only screen and (max-width: 722px) {
@@ -528,9 +566,12 @@ button:hover {
     .right-body {}
 
     .show {
+        border: 2px solid black;
         display: flex;
-        width: 93vw;
+        width: 88vw;
+        align-items: center;
         justify-content: space-evenly;
+        margin-left: 5vw;
     }
 
     .main {
@@ -538,8 +579,14 @@ button:hover {
     }
 
     .pie-chart {
-        width: 40%;
+        width: 35%;
+        margin: 0px;
     }
+
+    #user-list {
+        width: 32vw;
+    }
+
 }
 
 
@@ -547,6 +594,29 @@ button:hover {
     .main-box {
         width: 100%;
         overflow: auto;
+        height: 130px;
+        margin-bottom: 5px;
+        align-items: flex-end;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        padding-top: 10px;
+        padding: 10px;
+        margin: 5px;
+        height: 85px;
+    }
+
+    .box1 h2,
+    .box2 h2,
+    .box3 h2 {
+        margin-bottom: 5px;
+    }
+
+    .dark-light-mode {
+        border: 2px solid black;
+        margin-right: 10px;
     }
 
     .mid-body {
@@ -564,5 +634,19 @@ button:hover {
 
     #user-list {
         padding: 10px;
+        width: 60vw;
     }
 }
+
+.Trans-List{
+    padding: 20px;
+    border: 2px solid black;
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

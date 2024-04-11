@@ -10,7 +10,7 @@ async function handleLogin(event) {
 
     const data = { email, password };
     try {
-        const response = await fetch('https://expense-tracker-app-backend-ashen.vercel.app/user/login', {
+        const response = await fetch('https://expense-backend-app.vercel.app/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

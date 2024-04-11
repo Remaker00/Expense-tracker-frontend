@@ -9,7 +9,7 @@ async function handlepassword(event) {
 
     const data = { email };
     try {
-        const response = await fetch('https://expense-tracker-app-backend-ashen.vercel.app/password/send_mail', {
+        const response = await fetch('https://expense-backend-app.vercel.app/password/send_mail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
